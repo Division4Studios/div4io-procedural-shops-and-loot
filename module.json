@@ -1,13 +1,57 @@
 {
     "id": "div4io-procedural-shops",
-    "title": "Div4.io Procedural Shop Generation",
-    "description": "A simple module designed to quickly simulate simple to more advanced shop inventories for players to browse and DM's to manage and save.",
+    "name": "div4io-procedural-shops",
+    "author": "Galag'r",
+    "title": "Div4.io: A Procedural Shop Inventory Generator",
+    "description": "A simple module designed to quickly simulate shop inventories for Dungeon Masters in Foundry VTT.",
+    "version": "0.0.01",
+    "manifest": "https://github.com/Division4Studios/div4io-procedural-shops/releases/download/latest/module.json",
+    "readme": "https://github.com/Division4Studios/div4io-procedural-shops/blob/main/README.md",
+    "changelog": "https://github.com/Division4Studios/div4io-procedural-shops/blob/main/CHANGELOG.md",
+    "url": "https://github.com/Division4Studios/div4io-procedural-shops",
+    "minimumCoreVersion": "11.307",
+    "compatibleCoreVersion": "11",
     "authors": [
       {
-      "name": "Division 4 Studios (Galag'r)"
+      "name": "Division 4 Studios (Galag'r)",
+      "email": "ernest@division4studios.com",
+      "url": "https://div4.io",
+      "patreon": "https://www.patreon.com/Div4io",
+      "discord": "https://discord.gg/E5FSTTZPnz"
       }
     ],
-    "version": "1.0.0",
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+    ],
+    "system": [
+      "dnd5e"
+    ],
+    "relationships": {
+      "systems": [
+        {
+          "id": "dnd5e",
+          "type": "system",
+          "compatibility": {
+            "verified": "2.2.2"
+          }
+        }
+      ],
+      "requires": [{
+        "id": "monks-enhanced-journal",
+        "type": "module",
+        "manifest": "https://github.com/ironmonk88/monks-enhanced-journal/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "11.04"
+        }
+      }]
+    },
+    "esmodules": [
+      "dist/main.js"
+    ],
     "compatibility": {
       "minimum": "11",
       "maximum": "11",
