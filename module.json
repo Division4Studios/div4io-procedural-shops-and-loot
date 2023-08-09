@@ -3,6 +3,7 @@
     "name": "div4io-procedural-shops",
     "author": "Galag'r",
     "title": "Div4.io: A Procedural Shop Inventory Generator",
+    "license": "MIT License",
     "description": "A simple module designed to quickly simulate shop inventories for Dungeon Masters in Foundry VTT.",
     "version": "0.0.01",
     "manifest": "https://github.com/Division4Studios/div4io-procedural-shops/releases/download/latest/module.json",
