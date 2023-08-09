@@ -1,0 +1,16 @@
+{
+    "id": "div4io-procedural-shops",
+    "title": "Div4.io Procedural Shop Generation",
+    "description": "A simple module designed to quickly simulate simple to more advanced shop inventories for players to browse and DM's to manage and save.",
+    "authors": [
+      {
+      "name": "Division 4 Studios (Galag'r)"
+      }
+    ],
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": "11",
+      "maximum": "11",
+      "verified": "11"
+    }
+  }
