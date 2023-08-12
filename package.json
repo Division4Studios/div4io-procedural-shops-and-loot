@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "lint": "npx eslint src/",
+    "lint-fix": "npx eslint src/ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
   "devDependencies": {
     "terser-webpack-plugin": "5.3.9",
     "webpack": "5.88.2",
