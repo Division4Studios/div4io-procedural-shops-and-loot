@@ -39,6 +39,8 @@ jobs:
     - run: npm ci
     - name: Webpack
       run: npm run build
+    - name: Grant execute permission for script
+      run: chmod +x ./icon.sh
     - name: Build icon json
       run: ./icon.sh
     - name: Create Release Zip
