@@ -6,6 +6,11 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "node-fetch": "^3.2.10",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "2.3.2",
+    "terser": "^5.10.0",
     "terser-webpack-plugin": "5.3.9",
     "webpack": "5.88.2",
     "webpack-cli": "5.1.4"
