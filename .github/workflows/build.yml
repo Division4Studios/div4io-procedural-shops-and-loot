@@ -50,7 +50,7 @@ jobs:
       run: zip -r ./div4io-procedural-shops-and-loot.zip module.json dist lang LICENSE.md       # Add folders/files here
     - name: Create Release                                # Create an additional release for this version
       id: create_versioned_release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1.12.0
       with:
         allowUpdates: false # set to false if you do not want to allow updates on existing releases
         name: Release ${{ steps.get-version.outputs.release_version }} # Use the version in the name "${{ env.version }}"
@@ -67,3 +67,4 @@ jobs:
     #     module-id: ${{ secrets.FOUNDRY_MODULE_ID }}
     #     manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ env.release_version }} /module.json
     #     manifest-file: ./module.json
+    
