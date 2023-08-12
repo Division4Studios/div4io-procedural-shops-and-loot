@@ -1,4 +1,4 @@
-name: div4io-procedural-shops build
+name: div4io-procedural-shops-and-loot build
 
 on:
   workflow_dispatch:
@@ -42,7 +42,7 @@ jobs:
     - name: Build icon json
       run: ./icon.sh
     - name: Create Release Zip
-      run: zip -r ./div4io-procedural-shops.zip module.json dist lang LICENSE.md       # Add folders/files here
+      run: zip -r ./div4io-procedural-shops-and-loot.zip module.json dist lang LICENSE.md       # Add folders/files here
     - name: Create Release                                # Create an additional release for this version
       id: create_versioned_release
       uses: ncipollo/release-action@v1
@@ -52,28 +52,8 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json,./div4io-procedural-shops.zip'    # don't forget to rename module zip thing
+        artifacts: './module.json,./div4io-procedural-shops-and-loot.zip'    # don't forget to rename module zip thing
         tag: ${{ steps.get-version.outputs.release_version }} # Use the version as the tag
-    - name: Create Latest Release
-      id: create_latest_release
-      uses: ncipollo/release-action@v1
-      if: endsWith(github.ref, 'main') # Only update the latest release when pushing to the master branch
-      with:
-        allowUpdates: true
-        name: Latest
-        draft: false
-        prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json,./div4io-procedural-shops.zip'  # don't forget to rename module zip thing
-        tag: latest
-    - name: Discord notification
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_HOOK }}
-        DISCORD_USERNAME: "Div4.io Procedural Shops News"
-      uses: Ilshidur/action-discord@0.3.2
-      with:
-        args: 'Div4.io Foundry VTT Procedural Shops ${{ steps.get-version.outputs.release_version }} has been published by our development Kobolds!'
-
     # - name: FoundryVTT AutoPublish
     #   uses: Varriount/fvtt-autopublish@v1.0.9
     #   with:
