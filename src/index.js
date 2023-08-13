@@ -1,6 +1,6 @@
 import {
-    renderSidebarTab
-  } from "./hooks.js";
+  renderSidebarTab
+} from "./hooks.js";
 
 console.log("Hello World! This code runs immediately when the file is loaded.");
 
